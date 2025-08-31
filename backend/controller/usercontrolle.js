@@ -24,7 +24,9 @@ export function saveUser(req, res) {
     const user =new User({
         email: req.body.email,
         name: req.body.name,
-        address: req.body.address,
+        address_line1: req.body.address_line1,
+        city: req.body.city,
+        district: req.body.district,
         password: hashedPassword,
         role: req.body.role || "user", // Default role is 'user'
         phoneNumber: req.body.phoneNumber || "Not given", // Default phoneNumber to "Not given"
@@ -66,7 +68,9 @@ export function loginUser(req, res){
                 const userData ={
                     email: user.email,
                     name: user.name,
-                    address: user.address,
+                    address_line1: user.address_line1,
+                    city: user.city,
+                    district: user.district,
                     role: user.role,
                     phoneNumber: user.phoneNumber,
                     isDisable: user.isDisable,

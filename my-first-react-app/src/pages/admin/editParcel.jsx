@@ -15,7 +15,9 @@ export default function EditParcel() {
     const [parcelID, setParcelID] = useState(locationData.state.parcelID);
     const [name, setName] = useState(locationData.state.name);
     const [email, setEmail] = useState(locationData.state.email);
-    const [address, setAddress] = useState(locationData.state.address);
+    const [address_line1, setAddress_line1] = useState(locationData.state.address_line1);
+    const [city, setCity] = useState(locationData.state.city);
+    const [district, setDistrict] = useState(locationData.state.district);
     const [details, setDetails] = useState(locationData.state.details);
     const [estimateDate, setEstimateDate] = useState(locationData.state.estimateDate);
     const [status, setStatus] = useState(locationData.state.status);
@@ -25,7 +27,9 @@ export default function EditParcel() {
             parcelID: parcelID,
             name: name,
             email: email,
-            address: address,
+            address_line1: address_line1,
+            city: city,
+            district: district,
             details: details,
             estimateDate: estimateDate,
             status: status
@@ -78,11 +82,25 @@ export default function EditParcel() {
                     placeholder="E-mail"
                 />
                 <textarea
-                    value={address}
-                    onChange={(e) => setAddress(e.target.value)}
+                    value={address_line1}
+                    onChange={(e) => setAddress_line1(e.target.value)}
                     className="w-[400px] h-[70px] border border-gray-500 rounded-xl text-center m-[10px]"
                     type="text"
-                    placeholder="Address"
+                    placeholder="Address_line1"
+                />
+                <input
+                    value={city}
+                    onChange={(e) => setCity(e.target.value)}
+                    className="w-[400px] h-[70px] border border-gray-500 rounded-xl text-center m-[10px]"
+                    type="text"
+                    placeholder="City"
+                />
+                <input
+                    value={district}
+                    onChange={(e) => setDistrict(e.target.value)}
+                    className="w-[400px] h-[70px] border border-gray-500 rounded-xl text-center m-[10px]"
+                    type="text"
+                    placeholder="District"
                 />
                 <textarea
                     value={details}

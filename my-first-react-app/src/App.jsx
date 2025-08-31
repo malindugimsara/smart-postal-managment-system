@@ -6,9 +6,6 @@ import RegisterPage from './pages/registerPage'
 import AdminPage from './pages/adminPage'
 import Home from './pages/Home'
 import Postman from './pages/postman'
-import ScanQR from './pages/ScanQR'
-import ForgetPassword from './pages/forgetPassword'
-// import Sample from './pages/sample'
 
 function App() {
   
@@ -21,9 +18,6 @@ function App() {
         <Route path="/register" element={<RegisterPage/>} />
         <Route path="/admin/*" element={<AdminPage/>} />
         <Route path ="/postman/*" element={<Postman/>} />
-        <Route path="/scan" element={<ScanQR />} />
-        {/* <Route path="/forget-password" element={<ForgetPassword />} /> */}
-        {/* <Route path='/sample' element={<Sample/>}/> */}
       </Routes>
     </BrowserRouter>
   )

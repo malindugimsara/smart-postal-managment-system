@@ -7,7 +7,9 @@ export default function AddParcel() {
     const [parcelID, setParcelID] = useState("");
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
-    const [address, setAddress] = useState("");
+    const [address_line1, setAddress_line1] = useState("");
+    const [city, setCity] = useState("");
+    const [district, setDistrict] = useState("");
     const [details, setDetails] = useState("");
     const [estimateDate, setEstimateDate] = useState("");
     const [status, setStatus] = useState("");
@@ -19,7 +21,9 @@ export default function AddParcel() {
             parcelID: parcelID,
             name: name,
             email: email,
-            address: address,
+            address_line1: address_line1                                                                                                                                                        ,
+            city: city,
+            district: district,
             details: details,
             estimateDate: estimateDate,
             status: status
@@ -71,11 +75,25 @@ export default function AddParcel() {
                     placeholder="E-mail"
                 />
                 <textarea
-                    value={address}
-                    onChange={(e) => setAddress(e.target.value)}
+                    value={address_line1}
+                    onChange={(e) => setAddress_line1(e.target.value)}
                     className="w-[400px] h-[70px] border border-gray-500 rounded-xl text-center m-[10px]"
                     type="text"
-                    placeholder="Address"
+                    placeholder="Address_line1"
+                />
+                <input
+                    value={city}
+                    onChange={(e) => setCity(e.target.value)}
+                    className="w-[400px] h-[70px] border border-gray-500 rounded-xl text-center m-[10px]"
+                    type="text"
+                    placeholder="City"
+                />
+                <input
+                    value={district}
+                    onChange={(e) => setDistrict(e.target.value)}
+                    className="w-[400px] h-[70px] border border-gray-500 rounded-xl text-center m-[10px]"
+                    type="text"
+                    placeholder="District"
                 />
                 <textarea
                     value={details}

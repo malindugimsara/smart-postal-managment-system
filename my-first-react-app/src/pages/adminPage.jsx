@@ -15,7 +15,6 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import WelcomeAdmin from "../components/welcomeAdmin.jsx";
 import { FiHome } from "react-icons/fi";
-import ScanQR from "./ScanQR.jsx";
 
 export default function AdminPage() {
 
@@ -89,7 +88,6 @@ export default function AdminPage() {
                     <Route path="/addparcel" element={<AddParcel />} />
                     <Route path="/editparcel/" element={<EditParcel />} />
                     <Route path="/" element={<WelcomeAdmin />} /> 
-                    <Route path="/scan" element={<ScanQR />} />
                 </Routes>
             </div>
                 </>
